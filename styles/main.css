@@ -1,0 +1,145 @@
+@import "./variables.css";
+@import "./header.css";
+@import "./content.css";
+@import "./footer.css";
+
+* {
+    box-sizing: border-box;
+    font-family: var(--general-font-family);
+    color: var(--color-black);
+}
+
+
+body, h1, h2, h3, p {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font-family);
+}
+
+h1 {
+    text-shadow: 
+        1px 1px 0 var(--primary-color-dark),
+        2px 2px 2px var(--secondary-color);
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    background: var(--color-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button, .button {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: var(--primary-color);
+    color: var(--color-white);
+    outline: 1px solid var(--color-white);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+button:hover, .button:hover {
+    outline: 1px solid var(--color-white);
+    outline-offset: -.25rem;
+    cursor: pointer;
+}
+
+figcaption {
+    font-style: italic;
+    opacity: 0.85;
+}
+
+mark {
+    background: var(--secondary-color-light);
+}
+
+#app {
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-areas: "head head head"
+                         ". main ."
+                         "foot foot foot";
+    grid-template-columns: minmax(10%, auto) 1fr minmax(10%, auto);
+    grid-template-rows: minmax(50px, auto) 1fr minmax(50px, auto);
+}
+
+#top-bar {
+    grid-area: head;
+}
+
+#main-content {
+    grid-area: main;
+}
+
+#bottom-bar {
+    grid-area: foot;
+    background: var(--primary-color);
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 12vw;
+    }
+
+    #app {
+        grid-template-columns: 5% 1fr 5%;
+    }
+
+    #main-content article figure {
+        width: 100%;
+    }
+}
+
+@media (min-width: 650px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    #recent-post > .card {
+        flex-direction: row;
+    }
+
+    .card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 1rem;
+    }
+
+    .card-list .card {
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 1000px) {
+    #app {
+        grid-template-columns: minmax(10%, auto) 1000px minmax(10%, auto);
+    }
+
+    .card-list .card {
+        flex: 0 1 calc(33% - 1rem);
+    }
+
+    #main-content article figure {
+        width: 60%;
+    }
+}

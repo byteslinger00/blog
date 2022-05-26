@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="ram_icon.ico" />
+        <title>Memory Dump - Blog 1</title>
+    </head>
+
+    <body>
+        <div id="app">
+
+            <div id="top-bar">
+                My Memory Dump
+                <a class="button" href="#subscribe-form">Subscribe</a>
+            </div>
+
+            <div id="main-content">
+                <div class="page-title">
+                    <h1>Using a . for Spacing</h1>
+                    <p>October 26, 2021 by <a href="#user-summary">Richard Lam</a></p>
+                </div>
+                
+                <article>
+                    <p>First day of designing this thing and learned that grid-template-areas <mark>does not like named areas that aren't used</mark>.</p>
+                    <p>I tried to use "spacing" as a name of the side spacing I wanted to put on the side to center the content, but that messed up the entire structure and just laid all my elements on top of each other in the lower right corner. Wasn't sure why yet.</p>
+                    <p>Eventually, I found the solution, which I admittedly accidentally found, <mark>was to use "." (a period)</mark>, which is for unnamed grid areas. Changed it to that and I got that <i>magical feeling</i> you get when something just works.</p>
+                    <figure>
+                        <img src="../images/using_periods_in_grid_template.png" alt="Picture of code for #app selector specifying grid-template-columns." />
+                        <figcaption>Changed unused spaces to "." instead of "spacing".</figcaption>
+                    </figure>
+                    <p>Now this changes the game though. Previously I had though I needed to group my "main-content" into one div before effectively using the grid. But now that I know it's just me using the wrong grid-area name, I don't really need that parent div.</p>
+                    <p>That also means I'll need to change the area names to be more specific and add more specific heights for the rows as well. But that's a decision that I need to make. Do I want it all contained in a parent div, or <mark>split them into multiple divs</mark>?</p>
+                    <p>The app itself is a grid. But the main content is going to be just rows, which means primarily unidirectional, a job that seems better for flexbox, which would mean a parent div. I'll do that then.</p>
+                    <p>Also, I just noticed I'm two hours in. Not sure if that's really a good sign. <i>I'm pretty tired</i>.</p>
+                    <p>Been a while. things aren't working, and I don't know why. I think I rushed into creating the posts too much and the general template <i>might be messed up</i>? Now, with 1.5 hours left in the day, I'm basically restarting so I can focus on more of a wireframe and make sure things are properly set there before I go into any more detail. The main thing I want fixed is having the preview card be able to snap so the image is on top.</p>
+                    <p>I think it's time to review flexbox a bit.</p>
+                    <figure>
+                        <img src="../images/css_tricks_flexbox.png" alt="Article Title for CSS Tricks's Complete Guide to Flexbox." />
+                        <figcaption>I need to go over some things here.</figcaption>
+                    </figure>
+                </article>
+            </div>
+
+            <div id="bottom-bar">
+                <div id="nav-bar">
+                    <a class="nav-option" href="../index.html"><i class="fas fa-home"></i></a>
+                    <a class="nav-option" href="./blog2.html"><i class="far fa-caret-square-right"></i></a>
+                </div>
+                <div id="user-summary">
+                    <div class="avatar">
+                        <img src="../images/happy_husky.jpg" alt="Picture of a happy husky." />
+                    </div>
+                    <div class="user-summary-text">
+                        <h3>Richard Lam</h3>
+                        <p>I was a QA Engineer until recently when I decided I want to pursue Frontend Development because I miss coding and automation didn't cut it for me. I like huskies, even though I don't have one, and I like cooking, even though I don't think of myself as any kind of chef.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://facebook.com"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div id="subscribe-form">
+                    <h2>Subscribe for more!</h2>
+                    <form onSubmit="alert('You have subscribed!')">
+                        <input type="email" placeholder="Email Address" />
+                        <button type="submit">Subscribe!</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+
+</html>

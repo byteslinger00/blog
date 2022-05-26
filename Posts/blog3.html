@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="ram_icon.ico" />
+        <title>Memory Dump - Blog 3</title>
+    </head>
+
+    <body>
+        <div id="app">
+
+            <div id="top-bar">
+                My Memory Dump
+                <a class="button" href="#subscribe-form">Subscribe</a>
+            </div>
+
+            <div id="main-content">
+                <div class="page-title">
+                    <h1>Creating a Blog Page for some Real Content</h1>
+                    <p>October 28, 2021 by <a href="#user-summary">Richard Lam</a></p>
+                </div>
+                
+                <article>
+                    <p>The Blog Post Page I'm going to <mark>keep it simple</mark> so I can move on to adding more elements and not focusing on the design too much. <i>Plus, I think it's easier to read when there's less random stuff on the page anyways.</i></p>
+                    <p>I'm going to need links to other posts (ie. a simple 'previous' and 'next' will be fitting), and a subscription field at the bottom, very much like some other sites like Medium.</p>
+                    <p>With that idea in mind, I'll be adding both of those things in the footer,  though I'll need to change the Grid template. I should handle this before I make more posts since my header and footer will basically be the same across all pages. Also, I forgot to add a date and name for the posts. Actually, I need an avatar too.</p>
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1618073194091-9b24230ddb2a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80" alt="Man in black shorts running on track field in daytime." />
+                        <figcaption>I totally look like this guy from Unsplash.</figcaption>
+                    </figure>
+                    <p>I'll start with a simple three button row at the bottom on the footer. I'm going to add the wireframing for the User Summary and the Subscribe Form first before I get into the details because my main concern here is the responsiveness of those three elements.</p>
+                    <p><i>I've noted before that the User Summary looks very similar to the Card I use for the Most Recent Post.</i>I have the option of making it a card and adjusting. But there are some differences between the two, perhaps enough for me to think that I'll just stick with <i>creating another set of classes for it</i>. That way, I can also have it in the footer.css and there'd be a little less confusion. Plus, I don't really want the padding effect on the Summary.</p>
+                    <p>So I created the Avatar and everything ignoring a small pixel difference in Chrome, <i>which was later fixed with a slightly wider border</i>. But now I'll need to consider how things are on a bigger screen.</p>
+                    <figure>
+                        <img src="../images/avatar_summary.png" alt="A short introduction to the author of the blog post with a happy husky as the avatar." />
+                        <figcaption>This is what it eventually looked like on mobile. See the flexbox resemblance with the Blog Cards on the Homepage?</figcaption>
+                    </figure>
+                    <p>I like having the footer fill the width, makes it a bit more dynamic, but the content, I don't want it to fill the width, but I also don't want it to really also be limited to the width of my content. I want to have it so that there's a max all the elements in the footer, and flex will take care of rearranging them from vertical to horizontal. The footer's background itself will <mark>"blend" the elements together</mark> so it doesn't look as patchy.</p>
+                    <p>The concern I have though, is how the navbar on the bottom is going to work. Leaving it to fill the width seems weird. Maybe instead of using space-between and pushing buttons to the far left and right, I can center them and space it myself, making it more like a mobile navigator.</p>
+                    <figure>
+                        <img src="../images/mobile_navigator.png" alt="Bottom of a phone where the navigation buttons are, circled in red." />
+                        <figcaption>From Unsplash. Something like this. Three buttons, left, right, and home.</figcaption>
+                    </figure>
+                </article>
+            </div>
+
+            <div id="bottom-bar">
+                <div id="nav-bar">
+                    <a class="nav-option" href="./blog2.html"><i class="far fa-caret-square-left"></i></a>
+                    <a class="nav-option" href="../index.html"><i class="fas fa-home"></i></a>
+                    <a class="nav-option" href="./blog4.html"><i class="far fa-caret-square-right"></i></a>
+                </div>
+                <div id="user-summary">
+                    <div class="avatar">
+                        <img src="../images/happy_husky.jpg" alt="Picture of a happy husky." />
+                    </div>
+                    <div class="user-summary-text">
+                        <h3>Richard Lam</h3>
+                        <p>I was a QA Engineer until recently when I decided I want to pursue Frontend Development because I miss coding and automation didn't cut it for me. I like huskies, even though I don't have one, and I like cooking, even though I don't think of myself as any kind of chef.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://facebook.com"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div id="subscribe-form">
+                    <h2>Subscribe for more!</h2>
+                    <form onSubmit="alert('You have subscribed!')">
+                        <input type="email" placeholder="Email Address" />
+                        <button type="submit">Subscribe!</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+
+</html>

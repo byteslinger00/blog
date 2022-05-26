@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="ram_icon.ico" />
+        <title>Memory Dump - Blog 4</title>
+    </head>
+
+    <body>
+        <div id="app">
+
+            <div id="top-bar">
+                My Memory Dump
+                <a class="button" href="#subscribe-form">Subscribe</a>
+            </div>
+
+            <div id="main-content">
+                <div class="page-title">
+                    <h1>Saving the Fun Stuff for Last</h1>
+                    <p>October 29, 2021 by <a href="#user-summary">Richard Lam</a></p>
+                </div>
+                
+                <article>
+                    <p>Finished up the User Summary and a very simple Subscribe Form. Just pasting it into the footer should work since I already have some basic positioning CSS for the footer already.</p>
+                    <p>Aaaand...everything looks good so far! Just need to now style the navbar so that it looks better on bigger screens. I'm going to try doing a smaller mobile-first version first to see how it looks. I'm aiming for three buttons placed into the middle of the row at the bottom of the article so people can navigate to previous and next articles after they're done with this one.</p>
+                    <p>At first, I used space-between and then decided to space it with space-evenly on smaller screens. Just looked better between small and large screens because with space-between, the 'Previous' and 'Next' buttons where all the way to the sides, which is pretty annoying to use on a monitor. And then 4rem when it hit 450px, where I have some other changes happening as well.</p>
+                    <figure>
+                        <img src="../images/snapshot_of_footer.png" alt="Footer of this blog website on a wide screen." />
+                        <figcaption>Even added some max-width so the buttons stay relatively close together on the wide screen.</figcaption>
+                    </figure>
+                    <p>Now, with that done, the wireframe of the pages I have for the site are pretty much done. It's responsive on mobile and desktop, and I haven't found any overflow or overlapping issues yet. Glad I went back to redo some parts of the grid areas and flexbox CSS back in the beginning. Now, I get to have fun with choosing <mark>colors and fonts</mark>!</p>
+                    <p>I've always been attached to using teal for one of my projects, <i>or, I just really like teal and never noticed.</i> I'm aware that there is a triadic color scheme that basically includes a teal, taxi-cab yellow, and a dark pink. But I think a third color is too much and pink is too flashy for this. Turns out, there is a nice and modern color palette that I found, which includes a teal and a sunflower yellow that I'm quite fond of.</p>
+                    <figure>
+                        <img src="../images/modern_teal_palette.png" alt="A selection of 5 colors named: navy, ginger, seafoam, sunflower, and jean." />
+                        <figcaption>From Jordan Prindle Designs, this really caught my eye. Dark, but soft colors. Almost "architectural".</figcaption>
+                    </figure>
+                    <p>For fonts, I've decided on Playfair Display for headings, and Manrope for basically everything else. I do believe with the right styling I can maintain that "soft" design vibe to the site, something more inviting to a wider audience.<i>I know, it makes the site seem almost like it's not about tech and more about design. I kind of like it that way though, especially since this site is made with only <mark>HTML and CSS</mark>.</i></p>
+                </article>
+            </div>
+
+            <div id="bottom-bar">
+                <div id="nav-bar">
+                    <a class="nav-option" href="./blog3.html"><i class="far fa-caret-square-left"></i></a>
+                    <a class="nav-option" href="../index.html"><i class="fas fa-home"></i></a>
+                    <a class="nav-option" href="./blog5.html"><i class="far fa-caret-square-right"></i></a>
+                </div>
+                <div id="user-summary">
+                    <div class="avatar">
+                        <img src="../images/happy_husky.jpg" alt="Picture of a happy husky." />
+                    </div>
+                    <div class="user-summary-text">
+                        <h3>Richard Lam</h3>
+                        <p>I was a QA Engineer until recently when I decided I want to pursue Frontend Development because I miss coding and automation didn't cut it for me. I like huskies, even though I don't have one, and I like cooking, even though I don't think of myself as any kind of chef.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://facebook.com"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div id="subscribe-form">
+                    <h2>Subscribe for more!</h2>
+                    <form onSubmit="alert('You have subscribed!')">
+                        <input type="email" placeholder="Email Address" />
+                        <button type="submit">Subscribe!</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+
+</html>

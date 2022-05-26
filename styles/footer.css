@@ -1,0 +1,123 @@
+#nav-bar {
+    background: var(--secondary-color);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-option i {
+    color: var(--color-white);
+    font-size: 2.2rem;
+    line-height: 2rem;
+    text-shadow: 1px 1px 0 var(--color-black);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+.nav-option i:hover {
+    color: var(--primary-color-dark);
+    text-shadow: 
+        1px 1px 0 var(--color-grey),
+        2px 2px 0 var(--color-white),
+        3px 3px 0 var(--color-black);
+}
+
+#user-summary,
+#subscribe-form {
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+#user-summary .avatar img {
+    border: .35rem solid var(--secondary-color);
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+#user-summary .user-summary-text {
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+
+#user-summary .social-links {
+    font-size: 2rem;
+}
+
+#user-summary .social-links:hover {
+    font-size: 2.2rem;
+}
+
+#user-summary .social-links i {
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 1rem;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+}
+
+#user-summary .social-links i:hover {
+    color: var(--primary-color-dark);
+}
+
+#subscribe-form {
+    padding: 3rem auto;
+}
+
+#subscribe-form h2 {
+    margin-bottom: 0.5rem;
+}
+
+#subscribe-form form {
+    display: flex;
+    width: 100%;
+}
+
+#subscribe-form input {
+    width: 100%;
+    font-size: 1rem;
+    outline: 1px solid var(--color-white);
+    padding: 0.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background: var(--color-white);
+}
+
+#subscribe-form button[type="submit"] {
+    border-radius: 0 0.5rem 0.5rem 0;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+#subscribe-form button[type="submit"]:hover {
+    background: var(--color-white);
+    color: var(--primary-color);
+    outline-offset: 0rem;
+    cursor: pointer;
+}
+
+@media (min-width: 450px) {
+    #nav-bar {
+        justify-content: center;
+        column-gap: 4rem;
+    }
+
+    #user-summary {
+        flex-direction: row;
+        max-width: 35rem;
+    }
+
+    #subscribe-form {
+        max-width: 550px;
+    }
+}

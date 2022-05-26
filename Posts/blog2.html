@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="ram_icon.ico" />
+        <title>Memory Dump - Blog 2</title>
+    </head>
+
+    <body>
+        <div id="app">
+
+            <div id="top-bar">
+                My Memory Dump
+                <a class="button" href="#subscribe-form">Subscribe</a>
+            </div>
+
+            <div id="main-content">
+                <div class="page-title">
+                    <h1>Images and Text need to be Responsive too</h1>
+                    <p>October 27, 2021 by <a href="#user-summary">Richard Lam</a></p>
+                </div>
+                
+                <article>
+                    <p>Second day. Opened the website on Chrome (since it's my default browser right now) and discovered that the image positioning for my sample card is different than on Firefox.</p>
+                    <p>Actually, it was overflowing, but that was fixed with "overflow: hidden", but in Chrome, the image was positioned so that you see the top-left of the image, and for Firefox, it's positioned at the bottom-left even though I have "object-position: bottom left".</p>
+                    <p>Then I tried some other settings. With <mark>50% 50%</mark>, Firefox responds, but Chrome stays the same. For now, I'm gonna ignore it for now and deal with it later. I'm more concerned with the positioning of my card list.</p>
+                    <p><i>I was eventually able to fix this still with 50% 50%, though I don't remember how because that wasn't in my notes. I think I just had to refresh. I should've taken more pictures.</i></p>
+                    <figure>
+                        <img src="../images/firefox_vs_chrome_image_positioning.png" alt="Picture of two windows showing the same image element. The left is Firefox and the right being Chrome in a wider window." />
+                        <figcaption>Now they are positioned the same in both browsers.</figcaption>
+                    </figure>
+                    <p>After that, I used flexbox and adjusted some media queries to finish some responsiveness. But on smaller screens, such as for my S9, the h1 text with a word that's a little too long is getting in the way. So need to have a media query for that too.<i>Also, it was around this time I had discovered the importance of <mark>setting the viewport meta data</mark> in order for things to show up properly in mobile. Previously, looking at the Responsive View in DevTools, the site looked super zoomed out.</i></p>
+                    <figure>
+                        <img src="../images/snapshot_of_head.png" alt ="Picture showing the head tag in html." />
+                        <figcaption>The 'viewport' meta setting the device width and scale displayed the app the way I expected it on mobile.</figcaption>
+                    </figure>
+                    <p>Those media queries <mark>helped a lot</mark>. Everything now has much better responsiveness compared to the previous format I had before. The only thing is, I did want to set up flexbox so that there are cards that auto-adjust to fill the entire row, but it wouldn't grow to fill the last row. That one's a tricky one, but a smaller detail I'll also leave for later.</p>
+                </article>
+            </div>
+
+            <div id="bottom-bar">
+                <div id="nav-bar">
+                    <a class="nav-option" href="./blog1.html"><i class="far fa-caret-square-left"></i></a>
+                    <a class="nav-option" href="../index.html"><i class="fas fa-home"></i></a>
+                    <a class="nav-option" href="./blog3.html"><i class="far fa-caret-square-right"></i></a>
+                </div>
+                <div id="user-summary">
+                    <div class="avatar">
+                        <img src="../images/happy_husky.jpg" alt="Picture of a happy husky." />
+                    </div>
+                    <div class="user-summary-text">
+                        <h3>Richard Lam</h3>
+                        <p>I was a QA Engineer until recently when I decided I want to pursue Frontend Development because I miss coding and automation didn't cut it for me. I like huskies, even though I don't have one, and I like cooking, even though I don't think of myself as any kind of chef.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://facebook.com"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div id="subscribe-form">
+                    <h2>Subscribe for more!</h2>
+                    <form onSubmit="alert('You have subscribed!')">
+                        <input type="email" placeholder="Email Address" />
+                        <button type="submit">Subscribe!</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+
+</html>

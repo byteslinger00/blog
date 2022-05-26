@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --heading-font-family: 'Playfair Display', serif;
+    --general-font-family: 'Manrope', sans-serif;
+    --primary-color: #34acbc;
+    --primary-color-dark: #065464;
+    --primary-color-light: #85c3cf;
+    --secondary-color: #ddb247;
+    --secondary-color-light: #f5ce6d;
+    --color-black: #212121;
+    --color-grey: #7a7d84;
+    --color-white: floralwhite;
+}

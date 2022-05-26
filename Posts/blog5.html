@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="ram_icon.ico" />
+        <title>Memory Dump - Blog 5</title>
+    </head>
+
+    <body>
+        <div id="app">
+
+            <div id="top-bar">
+                My Memory Dump
+                <a class="button" href="#subscribe-form">Subscribe</a>
+            </div>
+
+            <div id="main-content">
+                <div class="page-title">
+                    <h1>A Little Design goes a Long Way.</h1>
+                    <p>October 30, 2021 by <a href="#user-summary">Richard Lam</a></p>
+                </div>
+                
+                <article>
+                    <p>Just changing the fonts brought the site to a <i>whole new level</i>. Times New Roman looked okay on the site, but Playfair Display and Manrope brought it to a whole other level of modern design. It gives the soft and welcoming feeling I was looking for. Now, all I wanna do extra is to <mark>make it pop out a bit</mark> in the page title to differentiate it a little bit.</p>
+                    <p>Then, I completed to "blog" look by adding a Date, Author name, and simple styling for image captions in smaller fonts to leave the focus to the heading and the text content.</p>
+                    <figure>
+                        <img src="../images/screenshot_of_heading.png" alt="Heading of an article in Playfair Display font saying 'Using a . (period) for Spacing'." />
+                        <figcaption>With a double text-shadow to ease between the black and secondary (yellow) color, the heading pops just enough.</figcaption>
+                    </figure>
+                    <p>Now that I have the general styling of entire website done, I can focus on the "smaller" things, like the design of the cards. The Cards don't look too bad, and they do stick with that kind of flat, but modern and open design. However, it looks a little too similar to the examples that Udacity provided. I wanna <mark>break from that a little</mark>.</p>
+                    <p>I'm thinking no border, rounded images, and therefore, "floating" text. Then, on hover, bring back the border/outline, and have it offset by the same amount that the padding is.</p>
+                    <figure>
+                        <img src="../images/screenshot_of_new_card.png" alt="Picture of a man pouring a drink next to sample title and text describing content." />
+                        <figcaption>Without a border, it almost breaks away from being a card. But making that into a hover animation brings it to another level.</figcaption>
+                    </figure>
+                    <p>It's been a long day. But pretty happy with what I have from just some minor design changes and "accidental" discoveries of transition animations. Now that these cards are done, all I need to do is spend some time to fill this site in with some <mark>real content</mark>.</p>
+                </article>
+            </div>
+
+            <div id="bottom-bar">
+                <div id="nav-bar">
+                    <a class="nav-option" href="./blog4.html"><i class="far fa-caret-square-left"></i></a>
+                    <a class="nav-option" href="../index.html"><i class="fas fa-home"></i></a>
+                </div>
+                <div id="user-summary">
+                    <div class="avatar">
+                        <img src="../images/happy_husky.jpg" alt="Picture of a happy husky." />
+                    </div>
+                    <div class="user-summary-text">
+                        <h3>Richard Lam</h3>
+                        <p>I was a QA Engineer until recently when I decided I want to pursue Frontend Development because I miss coding and automation didn't cut it for me. I like huskies, even though I don't have one, and I like cooking, even though I don't think of myself as any kind of chef.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://facebook.com"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div id="subscribe-form">
+                    <h2>Subscribe for more!</h2>
+                    <form onSubmit="alert('You have subscribed!')">
+                        <input type="email" placeholder="Email Address" />
+                        <button type="submit">Subscribe!</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+
+</html>
