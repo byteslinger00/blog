@@ -1,0 +1,23 @@
+.bold{
+    font-style: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.underline{
+    text-decoration-line: underline;
+}
+
+.color1 {
+    color: #9b4dca;
+}
+
+.color2 {
+    color: #606c76;
+}
+
+.color3 {
+    color: #d1d1d1;
+}
