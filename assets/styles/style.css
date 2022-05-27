@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
   }
+
+h1:hover {
+  color: #9b4dca;
+}
 .header {
     
     padding: 15px;
